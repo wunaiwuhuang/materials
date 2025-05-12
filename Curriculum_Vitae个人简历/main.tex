@@ -1,0 +1,551 @@
+\documentclass[a4paper,11pt]{article}
+
+% Package imports
+\usepackage{calligra}
+\usepackage{mathrsfs}
+\usepackage{latexsym}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+
+% Color definitions
+\definecolor{darkblue}{RGB}{0,0,139}
+
+% Page layout
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\setlength{\footskip}{5pt} % Addressing fancyhdr warning
+
+% Hyperlink setup (moved after fancyhdr to address warning)
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+% Custom box settings
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+% URL style
+\urlstyle{same}
+
+% Text alignment
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+% Commands for icon sizing and positioning
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+\newcommand{\ieeeicon}[1]{\raisebox{-0.3em}{\resizebox{!}{1.3em}{#1}}}
+
+% Font options
+\newcommand{\headerfonti}{\fontfamily{phv}\selectfont} % Helvetica-like (similar to Arial/Calibri)
+\newcommand{\headerfontii}{\fontfamily{ptm}\selectfont} % Times-like (similar to Times New Roman)
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont} % Palatino (elegant serif)
+\newcommand{\headerfontiv}{\fontfamily{pbk}\selectfont} % Bookman (readable serif)
+\newcommand{\headerfontv}{\fontfamily{pag}\selectfont} % Avant Garde-like (similar to Trebuchet MS)
+\newcommand{\headerfontvi}{\fontfamily{cmss}\selectfont} % Computer Modern Sans Serif
+\newcommand{\headerfontvii}{\fontfamily{qhv}\selectfont} % Quasi-Helvetica (another Arial/Calibri alternative)
+\newcommand{\headerfontviii}{\fontfamily{qpl}\selectfont} % Quasi-Palatino (another elegant serif option)
+\newcommand{\headerfontix}{\fontfamily{qtm}\selectfont} % Quasi-Times (another Times New Roman alternative)
+\newcommand{\headerfontx}{\fontfamily{bch}\selectfont} % Charter (clean serif font)
+
+\begin{document}
+\begin{justify}
+\headerfontiii
+
+% Header
+\begin{center}
+    {\Huge\textbf{Zhaoqi SHI}}
+\end{center}
+\vspace{-2mm}
+
+\begin{center}
+    \small{
+    (+86) 18058740766 | \href{https://wuguojia@tmu.edu.cn}{wuguojia@tmu.edu.cn} | 
+    \href{https://github.com/wunaiwuhuang}{github.com/wunaiwuhuang}
+    }
+\end{center}
+\vspace{-8mm}
+
+\begin{center}
+    \small{
+    \socialicon{\faGithub} \href{https://github.com/wunaiwuhuang}{https://github.com/wunaiwuhuang} | 
+    \socialicon{\faTwitter} \href{https://x.com/AIB_001}{AIB\_001}
+    }
+\end{center}
+\vspace{-7mm}
+\begin{center}
+    \small{Zhejiang University(ZJU), Hangzhou, Zhejiang - 310058, China}
+\end{center}
+
+\vspace{-4mm}
+
+\section{\large{\textbf{RESEARCH INTEREST}}}
+\vspace{1mm}
+{
+As a candidate with a strong foundation in both life sciences and physics, I specialize in applying molecular simulation techniques such as Molecular Dynamics and Free Energy Perturbation. My research interests focus on computational biophysics, with a particular emphasis on biomolecular studies. I am keen to explore applications in computer-aided drug design and engage in theoretical investigations like phase separation.
+}
+\vspace{-2mm}
+
+
+
+% \section{\textbf{Experience}}
+% \vspace{-0.4mm}
+%   \resumeSubHeadingListStart
+%   \resumeSubheading
+%       {{Company A [\href{https://www.companya.com}{\faIcon{globe}}]}}{City, Country}
+%       {Job Title A}{Month Year - Month Year}
+%       \resumeItemListStart
+%         \item Developed [specific achievement] achieving [specific metric] in [specific area]
+%         \item Implemented [technology/method], enhancing [specific aspect] by [specific percentage]
+%         \item Conducted analysis on [specific data], identifying [key findings]
+%         \item Presented findings at [specific event], receiving [specific recognition]
+%       \resumeItemListEnd 
+%   \resumeSubheading
+%     {Company B [\href{https://www.companyb.com}{\faIcon{globe}}]}{Remote}
+%     {Job Title B}{Month Year - Month Year}
+%     \resumeItemListStart
+%       \item Engineered a [specific system/model], improving [specific metric] by [percentage]
+%       \item Developed [specific tool/method], increasing [specific aspect] by [percentage]
+%       \item Implemented [specific system], reducing [specific metric] by [percentage]
+%       \item Conducted [specific test/analysis] to validate [specific aspect]
+%     \resumeItemListEnd
+%   \resumeSubHeadingListEnd
+% \vspace{-6mm}
+\vspace{1mm}
+\section{\large{\textbf{EDUCATION}}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Chu Kochen Honor College,\ \ Zhejiang University}{Hangzhou, China}
+{Bachelor of Science in \textbf{Biological Sciences and Physics (Double Major)}}{Sep. 2021 - Jun. 2025  (Expected)}
+\resumeItemListStart
+\item \textbf{GPA:} 3.96/4.00 (overall) and 3.99/4.00 (third year); \ \ \ \ \ \textbf{RANKING :} 1st out of 104 students;\ \ \ \ \  
+\item \textbf{TOEFL:} 104 (Best Score, R:28, L:28, S:23, W:25);
+\resumeItemListEnd
+
+% \resumeSubheading
+% {College Name}{City, Country}
+% {Pre-University Education}{Month Year}
+% \resumeItemListStart
+% \item Grade: XX.X\%
+% \resumeItemListEnd
+
+% \resumeSubheading
+% {High School Name}{City, Country}
+% {Secondary Education}{Month Year}
+% \resumeItemListStart
+% \item GPA: X.X/10
+% \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-8mm}
+
+\section{\large{\textbf{RESEARCH PROJECTS}}}
+\vspace{-0.6mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {Molecular Simulation-Driven Optimization of CDK7 Inhibitors \small{(Independent project)}}
+  {Supervisor:  \textbf{Prof. Ruhong Zhou}\ \ \ Supported by ZJU Key Research Project Fund (50,000 RMB, 10 people total);}
+  {Jul. 2023 - Jun. 2024}
+  {{}[\href{https://github.com/your-username/project-b}{\textcolor{darkblue}{\faGithub}}]}
+\resumeItemListStart
+\item \textbf{Developed a covalent model} for the THZ1-CAK complex (PDBID: 6XD3) incorporating non-standard amino acids, using CHARMM-GUI with the CHARMM force field for proteins and CGenFF for the small molecule.
+  \item Implemented virtual screening utilizing Smina, \textbf{identified 147 potential positive fragments using Smina's scoring function}, and generated linkers between selected fragments and the stable core-fragment of THZ1.
+  \item Conducted molecular dynamic with NAMD3 to relax the conformation of the generated links, selecting stable ligands and identifying 17 candidate ligands for further evaluation.
+  \item \textbf{Employed Free Energy Perturbation (FEP) calculations} to identify the top three ligands with superior free energy profiles compared to the original small molecules.
+\resumeItemListEnd
+
+\resumeProject
+  {Molecular Dynamics Simulation for NMR Order Parameter \small{(Collaborate project)}}
+  {\small Supervisor: \textbf{Prof. Ruhong Zhou}\ \ \ \  Collaborator: \textbf{Prof. Ann E. McDermott from Columbia University} }
+  {Jul. 2024 - Now}
+  {{}[\href{https://github.com/aib001}{\textcolor{darkblue}{\faGithub}}]}
+\resumeItemListStart
+  \item Developed ubiquitin protein (PDBID: 3ONS) model for molecular simulation under different force field, including AMBER-99/SB, OPLS-AA/S and CHARMM-36m;
+  \item Implemented both time average method and iRED method for calculating of order parameter, comparing between different bond-related order parameter (C-N, N-H, etc.);
+  \item Created benchmark for different force field, comparing to the experimental result;
+  \item Utilized Replica Exchange Molecular Dynamics (REMD) with GROMACS to enhance conformational sampling, performing under different temperature interval (300-400K, 300-450K, etc.).
+\resumeItemListEnd
+
+
+
+\resumeProject
+  {FEBuilder: Tools to streamline the FEP modeling procedure \small{(Collaborate project)}}
+  {\small Supervisor: \textbf{Prof. Ruhong Zhou}\ \ \ \  Collaborator: \textbf{Xufan Gao} }
+  {Mar. 2024 - Aug. 2024}
+  {{}[\href{https://github.com/gxf1212}{\textcolor{darkblue}{\faGithub}}]}
+\resumeItemListStart
+  \item Contributed to the development of algorithms incorporating distance-based mapping and charge modification techniques to enhance simulation accuracy.
+  \item Selected and studied systems such as Hif-2$\alpha$, T4-lysozyme, and p38$\alpha$-kinase; conducted benchmarking using FEBuilder for model establishment and utilized NAMD3 to perform free energy perturbation (FEP) calculations.
+\resumeItemListEnd
+
+\resumeProject
+  {Coarse-Grained Molecular Dynamics of FUS Phase Separation \small{(Independent project)}}
+  {\small Supervisor: \textbf{Rui Shi} }
+  {Sep. 2024 - Now}
+  {{}[\href{https://github.com/aib001}{\textcolor{darkblue}{\faGithub}}]}
+\resumeItemListStart
+\item Simulated single and dual-chain systems using both all-atom (AMBER force field) and HPS models  (OpenABC toolkit), benchmarked performance with $REE$ and $R_g$ metrics.
+
+\item Developed a coarse-grained model of 100 FUS monomers using OpenABC and conducted simulations with OpenMM.
+
+\item Expanded the aggregated system from 100 to 500 chains to observe droplet coalescence in the coarse-grained model.
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\resumeProject
+{\tiny{$\bullet$}\ \  \normalsize Synthsis of Low-dose X-ray Responsive Nanocarriers \small{(Collaborate project)}}
+  {Supervisor: \textbf{Prof. Ruhong Zhou }\ \ \ Collaborator: \textbf{Lianxue Zhang}}
+  {Mar. 2022 - Jun. 2023}
+  {{}[\href{https://github.com/aib001.github.io}{\textcolor{darkblue}{\faGithub}}]}
+\resumeItemListStart
+% \vspace{0.1mm} 
+
+  \item Demonstrated that in high reactive oxygen species (ROS) environments, such as in tumors, selenium radicals are rapidly oxidized into selenic acid, allowing efficient drug release, advancing its application in tumor radiotherapy.
+  \item Led the cell experiments and part of the synthesis experiments, successfully validating the mechanism where the Se-Se bond absorbs X-ray energy leading to bond breakage and radical formation
+
+\resumeItemListEnd
+
+\section{\textbf{Patents and Publications} \hfill \textcolor{darkblue}{\scriptsize C=Conference, P=Publication, S=In Submission}}
+\vspace{0.2mm}
+\small{
+\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}]}]
+
+\item[\textbf{[S.1]}] Zhaoqi Shi, et al. (2024). \textbf{Molecular Dynamics Simulation-Based Optimization of CDK7 Inhibitors for Enhanced Cancer Therapy}. Manuscript submitted for publication in \textit{BioArxiv}.
+
+\item[\textbf{[C.1]}] Gao, X., \textbf{Shi, Z.}, & Zhou, R. (2024). FEbuilder: A comprehensive webserver to streamline FEP simulation setup in drug discovery. American Chemical Society (ACS) Conference, 2024 Fall (ACS Fall 2024), Denver. Zenodo. \href{https://doi.org/10.5281/zenodo.14059079}{https://doi.org/10.5281/zenodo.14059079}
+
+% \item[\textbf{[P.1]}] Xufan Gao , Zhaoqi Shi, et al. (2024). \href{https://patentoffice.gov/patent/XXXXXXXXX}{\textbf{Febuilder: A comprehensive webserver to streamline FEP simulation setup in drug discovery}}. Patent Office, Patent No. XXXXXXXXX. Registration Date: Date, Grant Date: Date, Publication Date: Date.
+
+% \item[\textbf{[J.1]}] Author 1, Your Name, Author 3, et al. (Year). \href{https://doi.org/XX.XXXX/XXXXX.XXXX.XXXXXXX}{\textbf{Title of Journal Article}}. \textit{Journal Name}, Vol. XX, Issue X, pp. XXX-XXX. DOI: XX.XXXX/XXXXX.XXXX.XXXXXXX
+\end{enumerate}
+}
+
+\section{\textbf{SKILLS}}
+\vspace{-0.4mm}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Programming Languages:}
+    {C, C++, Python, R, Shell, Assembler language (x86 architecture)}
+  % \resumeSubItem{Web Technologies:}
+  %   {Technology 1, Technology 2, Technology 3, Technology 4, Technology 5}
+  % \resumeSubItem{Database Systems:}
+  %   {Database 1, Database 2, Database 3}
+  % \resumeSubItem{Data Science \& Machine Learning:}
+  %   {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5, Tool 6}
+\resumeSubItem{Molecular Dynamic Software:}
+    {NAMD, GROMACS, OpenMM, AmberTool, CHARMM-GUI,  Smina, Autodock Vina, MDAnalysis, Rdkit}
+  \resumeSubItem{Molecular Visualization:}
+    {Pymol, VMD, ChimeraX}
+  \resumeSubItem{Biological Experiment and Techniques:}
+    {Surface Plasmon Resonance(SPR), Transmission Electron Microscopy(TEM), Determination of IC50, Common biochemical experiment like Western Blot, PCR, etc.}
+  % \resumeSubItem{Mathematical \& Statistical Tools:}
+  %   {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5}
+  % \resumeSubItem{Other Tools \& Technologies:}
+  %   {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5}
+  \resumeSubItem{Research Skills:}{Biorender, LaTeX, familiar with PowerPoint and PhotoShop for research drawing and academic poster production}
+ \resumeHeadingSkillEnd
+
+\section{\textbf{Honors and Awards}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {National Scholarship}
+  {Zhejiang University}
+  {Oct. 2024}
+  {{}[\href{https://www.zju.edu.cn/}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeItemListStart
+  \item Ranked in the top 2\% of students in China.
+\resumeItemListEnd
+
+\resumeProject
+  {Zhejiang University Scholarship -- First Prize}
+  {Zhejiang University}
+  {Oct. 2022 \& Oct. 2023 \& Oct. 2024}
+  {{}[\href{https://www.zju.edu.cn/}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeItemListStart
+  \item Merit-Based scholarship for top 10\% student in Zhejiang University
+\resumeItemListEnd
+
+\resumeProject
+  {The China Optical Valley Scholarship}
+  {Zhejiang University}
+  {Oct. 2023}
+  {{}[\href{http://lsi.zju.edu.cn/2022/1108/c25109a2675237/page.htm}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeItemListStart
+  \item The Highest External Corporate Scholarship
+  \item Awarded to only one student in the entire \textit{College of Life Science} for outstanding academic achievement and leadership potential
+\resumeItemListEnd
+
+% \resumeProject
+%   {The First Prize Scholarship}
+%   {Zhejiang University}
+%   {Oct. 2022}
+%   {{}[\href{https://www.zju.edu.cn/}{\textcolor{darkblue}{\faIcon{globe}}}]}
+% \resumeItemListStart
+%   \item Merit-Based scholarship for top 10\% student in Zhejiang University
+% \resumeItemListEnd
+
+\resumeProject
+  {Provincial Government Scholarship}
+  {Government of Zhejiang Province}
+  {Oct. 2022}
+  {{}[\href{https://www.zju.edu.cn/}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeItemListStart
+  \item Merit-Based scholarship for top 5\% student in Zhejiang Province 
+\resumeItemListEnd
+
+\resumeProject
+  {Scholarship for Pursuit Science Class}
+  {ChuKoChen Honor College}
+  {Oct. 2022 \& Oct. 2023 \& Oct. 2024}
+  {{}[\href{https://www.zju.edu.cn/}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeItemListStart
+  \item Merit-Based scholarship for student in Chu Kochen Honor College, especially for fundamental subjects
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-6mm}
+\section{\textbf{Leadership, Social Engagement, and Other Achievements}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumeProject
+{Teaching Assistant in Molecular Pathology}
+{Zhejiang University, College of Life Sciences in association with \textbf{Prof. Yiping Li} at Tulane University}
+{Apr. 2024- Jun. 2024}
+{}
+{}
+\resumeProject
+  {Head of Department, Life Sciences Student Association}
+  {College of Life Science, Zhejiang University}
+  {Sep. 2022 - Jun. 2024}
+  {{}[\href{https://qiushibio.github.io/}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeItemListStart
+  \item Organized and coordinated all volunteer activities in College of Life Science, including social practice and community service; Responsible for recruiting and training volunteers, enhancing their skills and engagement in projects
+  \item Designed and developed college web pages, improving overall user experience and site accessibility
+\resumeItemListEnd
+
+\resumeProject
+  {Second Prize in the Physics Competition}
+  {Zhejiang Physical Society}
+  {Oct. 2023}
+  {{}[\href{https://organization-b-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeProject
+  {Third Prize in the Chinese Mathematics Competitions}
+  {Chinese Mathematical Society}
+  {Oct. 2022}
+  {{}[\href{https://organization-b-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+\resumeProject
+  {Fifth place in mixed doubles table tennis, Zhejiang University}
+  {Table Tennis Association of Zhejiang University}
+  {Oct. 2022}
+  {{}[\href{https://organization-b-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+
+
+\resumeSubHeadingListEnd
+
+\vspace{-6mm}
+
+% \section{\textbf{Volunteer Experience}}
+% \vspace{-0.4mm}
+% \resumeSubHeadingListStart
+% \resumeProject
+%   {Volunteer Role A}
+%   {Organization Name}
+%   {Month Year - Month Year}
+%   {{}[\href{https://volunteer-org-a-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+% \resumeItemListStart
+%   \item Key responsibility or contribution in this role
+%   \item Impact of your volunteer work
+%   \item Skills developed or applied during this experience
+% \resumeItemListEnd
+
+% \resumeProject
+%   {Volunteer Role B}
+%   {Organization Name}
+%   {Month Year - Present}
+%   {{}[\href{https://volunteer-org-b-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+% \resumeItemListStart
+%   \item Key responsibility or contribution in this role
+%   \item Impact of your volunteer work
+%   \item Skills developed or applied during this experience
+% \resumeItemListEnd
+
+% \resumeSubHeadingListEnd
+% \vspace{-6mm}
+
+% \section{\textbf{Professional Memberships}}
+% \vspace{-0.4mm}
+% \resumeSubHeadingListStart
+% \resumePOR{Professional Organization A}
+%     {, Membership ID: XXXXXXXX}
+%     {Month Year - Present}
+% \resumePOR{Professional Organization B}
+%     {, \href{https://membership-certificate-link.com}{Membership ID: XXXXXXXX}}
+%     {Month Year - Present}
+% \resumePOR{Professional Organization C}
+%     {, \href{https://membership-certificate-link.com}{Membership ID: XXXXXXXX}}
+%     {Month Year - Present}
+
+% \resumeSubHeadingListEnd
+% \vspace{-6mm}
+
+% \section{\textbf{Certifications}}
+% \vspace{-0.2mm}
+% \resumeSubHeadingListStart
+% \resumePOR{}{\href{https://certification-link-a.com}{
+% \textbf{Certification A}
+% }}{Month Year}
+% \resumePOR{}{
+% \textbf{Certifying Body:} {{\href{https://certification-link-b.com}{Certification B}}}}{Month Year}
+% \resumePOR{}{
+% \textbf{Certifying Body:} {{\href{https://certification-link-c.com}{Certification C}}}}{Month Year}
+% \resumePOR{}{\href{https://certification-link-d.com}{
+% \textbf{Certification D}
+% }}{Month Year}
+
+% \resumeSubHeadingListEnd
+% \vspace{-6mm}
+
+% \section{\textbf{Additional Information}}
+% \vspace{-0.4mm}
+% \small{
+% \textbf{Languages:} Language A (Proficiency level), Language B (Proficiency level), Language C (Proficiency level)
+
+% \textbf{Interests:} Interest 1, Interest 2, Interest 3, Interest 4
+% }
+% \vspace{-4mm}
+
+
+% \section{\textbf{References}}
+% \vspace{-0.2mm}
+% \small{
+% \begin{enumerate}[leftmargin=*,labelsep=2mm]
+% \item \textbf{Reference Person 1}\\
+%    Job Title, Department\\
+%    Organization/Institution Name\\
+%    Email: email1@example.com\\
+%    Phone: +X-XXX-XXX-XXXX\\
+%    \textit{Relationship: [e.g., Thesis Advisor, Manager, etc.]}
+
+% \item \textbf{Reference Person 2}\\
+%    Job Title, Department\\
+%    Organization/Institution Name\\
+%    Email: email2@example.com\\
+%    Phone: +X-XXX-XXX-XXXX\\
+%    \textit{Relationship: [e.g., Project Supervisor, Colleague, etc.]}
+
+% \item \textbf{Reference Person 3}\\
+%    Job Title, Department\\
+%    Organization/Institution Name\\
+%    Email: email3@example.com\\
+%    Phone: +X-XXX-XXX-XXXX\\
+%    \textit{Relationship: [e.g., Mentor, Collaborator, etc.]}
+% \end{enumerate}
+% }
+\end{justify}
+\end{document}
