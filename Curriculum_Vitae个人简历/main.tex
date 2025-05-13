@@ -224,7 +224,7 @@ With a strong foundation in both basic medicine and bioinformatics, I specialize
 {Bachelor of Science in \textbf{Basic Medicine (Chu Hsien-I class)}}{Sep. 2021 - Jun. 2026  (Expected)}
 \resumeItemListStart
 \item \textbf{GPA:} 3.77/4.00 (Overall); \ \ \ \ \ \textbf{RANKING :} 2nd (Third year)/1st (Overall) out of 22 students;\ \ \ \ \  
-\item \textbf{IELTs:} 7.0 (Validated Score, R:8.0, L:7.0, S:6.0, W:6.0);
+\item \textbf{IELTs:} 7.0, C1 (Validated Score, R:8.0, L:7.0, S:6.0, W:6.0);
 \resumeItemListEnd
 
 % \resumeSubheading
@@ -247,23 +247,77 @@ With a strong foundation in both basic medicine and bioinformatics, I specialize
 \section{\large{\textbf{RESEARCH PROJECTS}}}
 \vspace{-0.6mm}
 \resumeSubHeadingListStart
-
 \resumeProject
-  {Molecular Simulation-Driven Optimization of CDK7 Inhibitors \small{(Independent project)}}
-  {Supervisor:  \textbf{Prof. Ruhong Zhou}\ \ \ Supported by ZJU Key Research Project Fund (50,000 RMB, 10 people total);}
-  {Jul. 2023 - Jun. 2024}
-  {{}[\href{https://github.com/your-username/project-b}{\textcolor{darkblue}{\faGithub}}]}
+  {Pan-Cancer Atlas of TCGA ipaQTM \small{(Independent project)}}
+  {Supervisor: \textbf{Prof. Yang Yang} \ \ \ Supported by YY Lab, TMU;}
+  {Mar. 2025 - Present}
+  {{}[\href{https://github.com/wunaiwuhuang/materials/tree/main/Award\_and\_honour\%E8\%8E\%B7\%E5\%A5\%96\%E8\%AF\%81\%E6\%98\%8E/innovation\%20and\%20Entrepreneurship\%20Competition}{\textcolor{darkblue}{\faGithub}}]}
 \resumeItemListStart
-\item \textbf{Developed a covalent model} for the THZ1-CAK complex (PDBID: 6XD3) incorporating non-standard amino acids, using CHARMM-GUI with the CHARMM force field for proteins and CGenFF for the small molecule.
-  \item Implemented virtual screening utilizing Smina, \textbf{identified 147 potential positive fragments using Smina's scoring function}, and generated linkers between selected fragments and the stable core-fragment of THZ1.
-  \item Conducted molecular dynamic with NAMD3 to relax the conformation of the generated links, selecting stable ligands and identifying 17 candidate ligands for further evaluation.
-  \item \textbf{Employed Free Energy Perturbation (FEP) calculations} to identify the top three ligands with superior free energy profiles compared to the original small molecules.
+  \item Investigated the relationship between DNA methylation and intronic pre-mRNA polyadenylation (IPA) across 23 cancer types using TCGA data.
+  \item Constructed a pan-cancer ipaQTM (intron polyadenylation quantitative trait methylation) map using Inpact and MatrixEQTL, \textbf{identifying over 500,000 cis-/trans- associations, Discovered thousands of putative IPA regulators.} 
+  \item Investigating the mechanism behind DNA methylation and IPA, including trans effects from genes such as \textit{CDK12, BCL2, and CPSF1}, and cis effects involving DNA structure and transcription factor (such as \textit{CTCF}) binding.\textbf{Uncovered mechanistic links between DNA methylation and RNA polyadenylation, providing a novel regulatory layer in cancer transcriptomics.}
 \resumeItemListEnd
 
+\resumeProject
+  {Glycolysis-Related Subtypes in Hepatocellular Carcinoma \small{(Independent project)}}
+  {Supervisor: \textbf{Prof. Yongmei Li} \ \ \ Supported by TMU Yongmei Li Lab;}
+  {Mar. 2025 - Present}
+  {{}[\href{https://github.com/wunaiwuhuang/materials/tree/main/Award\_and\_honour\%E8\%8E\%B7\%E5\%A5\%96\%E8\%AF\%81\%E6\%98\%8E/innovation\%20and\%20Entrepreneurship\%20Competition}{\textcolor{darkblue}{\faGithub}}]}
+\resumeItemListStart
+  \item Identified key glycolysis-related genes (e.g., \textit{SMG1}, \textit{SRRM2}, \textit{STAG1}) strongly associated with HCC progression through multi-omics integration (RNA-seq, mutation, methylation).
+  \item Constructed a robust glycolytic gene map via PCA and CatBoost-based feature selection from 30 candidate genes.\textbf{Developed an NMF-based molecular subtyping model validated against clinical and cellular data, providing diagnostic value for HCC.}
+  \item Explored associations between glycolysis levels and immune infiltration patterns in different HCC subtypes.
+\resumeItemListEnd
+
+\resumeProject
+  {Comprehensive Benchmark of DNN-Based pMHC Predictors \small{(Independent project)}}
+  {Supervisor: \textbf{Prof. Yang Yang} \ \ \ Supported by TMU YY Lab;}
+  {Sep. 2024 - Jan. 2025}
+  {{}[\href{https://github.com/wunaiwuhuang/materials/tree/main/Award\_and\_honour\%E8\%8E\%B7\%E5\%A5\%96\%E8\%AF\%81\%E6\%98\%8E/innovation\%20and\%20Entrepreneurship\%20Competition}{\textcolor{darkblue}{\faGithub}}]}
+\resumeItemListStart
+  \item Benchmarked 17 state-of-the-art DNN-based tools for HLA-I peptide binding prediction using a \textbf{self-curated dataset of 290,000+ peptides across 44 alleles. Assessed model accuracy, robustness, and interpretability; incorporated SHAP and LIME to reveal internal mechanisms and feature contributions}.
+  \item Found self-attention models (STMHCpan, BigMHC) achieved best overall performance, while capsule-based CapsNet-MHC\_AN showed strong generalizability.Demonstrated that models trained on eluted ligand data outperform those using binding affinity data; ensemble strategies further improved reliability.
+  \item Provided actionable guidelines for model selection, data integration, and the design of interpretable, clinically useful immunoinformatics tools.
+\resumeItemListEnd
+
+\resumeProject
+  {The role of HADH Isoform 3 in Endometrial Cancer \small{(Independent project)}}
+  {Supervisor: \textbf{Prof. Yongmei Li} \ \ \ Supported by TMUUROP Fund (1,000 RMB, 10 people in Basic Medicine College);}
+  {Mar. 2023 - Aug. 2024}
+  {{}[\href{https://github.com/wunaiwuhuang/materials/tree/main/Award\_and\_honour\%E8\%8E\%B7\%E5\%A5\%96\%E8\%AF\%81\%E6\%98\%8E/innovation\%20and\%20Entrepreneurship\%20Competition}{\textcolor{darkblue}{\faGithub}}]}
+\resumeItemListStart
+  \item \textbf{First identified the link between the fatty acid metabolism gene \textit{HADH} and endometrial cancer (EC)} using RNA-seq, genomics, and metabolomics data analysis.
+  \item Discovered that \textit{HADH} isoform 3 is downregulated in EC through DDX3X suppression, leading to activation of the MEK/ERK signaling pathway and promotion of malignant EC phenotypes.
+  \item Demonstrated the therapeutic potential of \textit{HADH} as a biomarker for EC, and its role in tumor infiltration and microenvironment construction.
+  \item Provided insights for improved EC diagnosis, treatment, and prognosis monitoring by mapping the complete pathway of \textit{HADH-DDX3X-MEK/ERK} interaction.
+\resumeItemListEnd
+
+\resumeProject
+  {The role of Raptor in Post-Ischemic Angiogenesis \small{(Collaborative project)}}
+  {Supervisor: \textbf{Prof. Ding Ai} \ \ \ Supported by TMUUROP Fund (20,000 RMB, 20 people in TianJin Medical University);}
+  {Apr. 2022 - Aug. 2023}
+  {{}[\href{https://github.com/wunaiwuhuang/materials/tree/main/Award\_and\_honour\%E8\%8E\%B7\%E5\%A5\%96\%E8\%AF\%81\%E6\%98\%8E/innovation\%20and\%20Entrepreneurship\%20Competition}{\textcolor{darkblue}{\faGithub}}]}
+\resumeItemListStart
+  \item Peripheral artery disease (PAD) is characterized by arterial narrowing/occlusion leading to ischemia, often progressing to ulcers, gangrene, or limb amputation without timely revascularization.We investigated the role of \textbf{Raptor}, a core component of the mTORC1 complex, in post-ischemic angiogenesis using both in vivo and in vitro models.
+  \item Explored the contribution of mTORC1 signaling in vascular regeneration, providing novel insights into the molecular regulation of ischemia-induced angiogenesis. Our findings could offer new therapeutic strategies for PAD by targeting the Raptor/mTORC1 pathway to enhance revascularization and tissue recovery.
+\resumeItemListEnd
+
+\resumeProject
+  {The role of Annexin A2 in Hepatocarcinogenesis \small{(Collaborative project)}}
+  {Supervisor: \textbf{Prof. Chunjiong Wang} \ \ \ Supported by TMUUROP Fund (10,000 RMB, 40 students);}
+  {Apr. 2022 - Aug. 2023}
+  {{}[\href{https://github.com/wunaiwuhuang/materials/tree/main/Award\_and\_honour\%E8\%8E\%B7\%E5\%A5\%96\%E8\%AF\%81\%E6\%98\%8E/innovation\%20and\%20Entrepreneurship\%20Competition}{\textcolor{darkblue}{\faGithub}}]}
+\resumeItemListStart
+  \item Investigated the differential roles of \textbf{Annexin A2 (ANXA2)} in normal liver regeneration and hepatocellular carcinoma (HCC) development.We identified that ANXA2 upregulates cholesterol biosynthesis, enhancing hepatocyte proliferation via increased intracellular cholesterol.
+  \item Combined transcriptomic and metabolomic approaches to explore how ANXA2-mediated cholesterol regulation contributes to HCC progression.The findings suggest ANXA2 as a potential dual-function target to simultaneously suppress HCC and promote normal liver regeneration after partial hepatectomy.
+\resumeItemListEnd
 \resumeSubHeadingListEnd
 
-\section{\textbf{Publications} \hfill \textcolor{darkblue}{\scriptsize A=Research article, R=Review, P=Publication, S=In Submission}}
-\vspace{0.2mm}
+\section{
+  \textbf{Publications} \hfill 
+  \textcolor{darkblue}{\scriptsize A=Research article, R=Review, P=Publication, S=In Submission}
+  {\scriptsize\hspace{0.5em}[\href{https://github.com/wunaiwuhuang/materials/tree/main/My\_articles\%E8\%AE\%BA\%E6\%96\%87\%E8\%AF\%81\%E6\%98\%8E}{\textcolor{darkblue}{\faGithub}}]}
+}
 \small{
 \begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}]}]
 
@@ -281,7 +335,7 @@ With a strong foundation in both basic medicine and bioinformatics, I specialize
 \end{enumerate}
 }
 
-\section{\textbf{SKILLS}}
+\section{\textbf{ACADEMIC SKILLS}}
 \vspace{-0.4mm}
  \resumeHeadingSkillStart
   \resumeSubItem{Programming Languages:}
@@ -297,7 +351,7 @@ With a strong foundation in both basic medicine and bioinformatics, I specialize
   % \resumeSubItem{Data Science \& Machine Learning:}
   %   {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5, Tool 6}
   \resumeSubItem{Research Skills:}
-    {Proficient in visualization tools including PowerPoint, Photoshop, and Adobe Illustrator; skilled in LaTeX, Word, and Excel for academic writing and data processing; experienced in using EndNote for reference management with strong literature search and data organization abilities.}
+    {Familiar with operating sysmtem (Windows 7, 8, 10; Linux centOS, mint, ubuntu);Proficient in visualization tools including PowerPoint, Photoshop, and Adobe Illustrator; skilled in LaTeX, Word, and Excel for academic writing and data processing; experienced in using EndNote for reference management with strong literature search and data organization abilities.}
  \resumeHeadingSkillEnd
 
 \section{\textbf{Honors and Scholarship}}

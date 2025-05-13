@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.11.13)  13 MAY 2025 16:55
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.11.13)  13 MAY 2025 21:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -784,13 +784,12 @@ File: tikzlibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: pgflibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))) (e:/Latex_texlive/2022/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
 Library (tcolorbox): 'tcbposter.code.tex' version '5.0.2'
-))
-No file main.aux.
+)) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/lmm/m/it on input line 151.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 151.
-(e:/Latex_texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
+ (e:/Latex_texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    ... okay on input line 151.
@@ -876,16 +875,13 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 151.
 LaTeX Info: Redefining \pageref on input line 151.
 LaTeX Info: Redefining \nameref on input line 151.
+ (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
 \c@lstlisting=\count350
 LaTeX Font Info:    Trying to load font information for T1+ppl on input line 153.
-(e:/Latex_texlive/2022/texmf-dist/tex/latex/psnfss/t1ppl.fd
+ (e:/Latex_texlive/2022/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 
@@ -912,42 +908,44 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 220.
+ [1
+
+]
+Overfull \hbox (4.39203pt too wide) in alignment at lines 299--299
+[] [] 
+ []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hfill' on input line 265.
+(hyperref)                removing `\hfill' on input line 320.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\faPreselectedIcon' on input line 320.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 286.
+(Font)              <10> on input line 340.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 286.
-[1
-
-]
-Overfull \hbox (1.90578pt too wide) in paragraph at lines 344--350
+(Font)              <7> on input line 340.
+[2]
+Overfull \hbox (1.90578pt too wide) in paragraph at lines 398--404
 [][]    
  []
 
 Missing character: There is no “ ("201C) in font pplr8t!
 Missing character: There is no ” ("201D) in font pplr8t!
 Missing character: There is no ’ ("2019) in font pplr8t!
-[2] (./main.aux)
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  5F3B054D4928C7846EC12723079FA827;1385.
+[3] (./main.aux)
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D5D94AADFBD26D9AF46D5B8F95E33F6A;1505.
  ) 
 Here is how much of TeX's memory you used:
- 30855 strings out of 476179
- 606221 string characters out of 5810425
- 1036010 words of memory out of 5000000
- 51036 multiletter control sequences out of 15000+600000
- 520947 words of font info for 89 fonts, out of 8000000 for 9000
+ 30867 strings out of 476179
+ 606448 string characters out of 5810425
+ 1037018 words of memory out of 5000000
+ 51040 multiletter control sequences out of 15000+600000
+ 521886 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,11n,99p,622b,726s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,11n,99p,622b,707s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (2 pages).
+Output written on main.pdf (3 pages).
