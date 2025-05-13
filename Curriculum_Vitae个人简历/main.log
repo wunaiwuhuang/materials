@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.11.13)  13 MAY 2025 21:55
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.11.13)  13 MAY 2025 22:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -911,24 +911,24 @@ LaTeX Font Info:    External font `lmex10' loaded for size
  [1
 
 ]
-Overfull \hbox (4.39203pt too wide) in alignment at lines 299--299
+Overfull \hbox (4.39203pt too wide) in alignment at lines 298--298
 [] [] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hfill' on input line 320.
+(hyperref)                removing `\hfill' on input line 319.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\faPreselectedIcon' on input line 320.
+(hyperref)                removing `\faPreselectedIcon' on input line 319.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 340.
+(Font)              <10> on input line 339.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 340.
+(Font)              <7> on input line 339.
 [2]
-Overfull \hbox (1.90578pt too wide) in paragraph at lines 398--404
+Overfull \hbox (1.90578pt too wide) in paragraph at lines 397--403
 [][]    
  []
 
@@ -937,15 +937,15 @@ Missing character: There is no ” ("201D) in font pplr8t!
 Missing character: There is no ’ ("2019) in font pplr8t!
 [3] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D5D94AADFBD26D9AF46D5B8F95E33F6A;1505.
+(rerunfilecheck)             Checksum: D5236B129ED2089ED672F1FF9A6A15B5;1442.
  ) 
 Here is how much of TeX's memory you used:
- 30867 strings out of 476179
- 606448 string characters out of 5810425
- 1037018 words of memory out of 5000000
+ 30868 strings out of 476179
+ 606458 string characters out of 5810425
+ 1036955 words of memory out of 5000000
  51040 multiletter control sequences out of 15000+600000
- 521886 words of font info for 92 fonts, out of 8000000 for 9000
+ 521889 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,11n,99p,622b,707s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,11n,99p,622b,680s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on main.pdf (3 pages).
